@@ -1,0 +1,29 @@
+<template>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="reading-list panel panel-default">
+        <div class="panel-heading">Reading List</div>
+        <div class="panel-body">
+          <ul>
+            <li repeat.for="book of readingList">
+              <div>
+                <a route-href="route: book; params.bind: {id: book.id}">
+                  ${book.title}
+                </a>
+              </div>
+              <div>Authors: ${book.authors.join(', ')}</div>
+              <div>Started On: ${book.startDate}</div>
+              <div>Finished On: ${book.endDate || 'In Progress'}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="jumbotron">
+        <h4>Next Reading Assigment</h4>
+        <p>${readingAssignment()}</p>
+      </div>
+    </div>
+  </div>
+</template>
