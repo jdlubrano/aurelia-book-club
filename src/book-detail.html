@@ -1,0 +1,19 @@
+<template>
+  <div class="book-container">
+    <div class="row">
+      <div class="col-xs-12">
+      </div>
+      <div class="col-xs-8">
+        <ul style="list-style-type: none;">
+          <li>
+            <h1>${book.title}</h1>
+          </li>
+          <li>Authors: ${book.authors.join(', ')}</li>
+        </ul>
+      </div>
+      <div class="col-xs-4">
+        <img src="${book.imageUrl}">
+      </div>
+    </div>
+  </div>
+</template>

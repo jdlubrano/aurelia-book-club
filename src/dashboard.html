@@ -21,8 +21,16 @@
     </div>
     <div class="col-md-8">
       <div class="jumbotron">
-        <h4>Next Reading Assigment</h4>
-        <p>${readingAssignment()}</p>
+        <h3>Reading Assigments</h3>
+        <p with.bind="readingAssignments[readingAssignmentIndex]">
+          Read ${chapters.length > 1 ? 'chapters' : 'chapter'}
+          ${chapters.join(', ')} by
+          ${dueDate.format('MM/DD/YYYY')}
+        </p>
+        <button click.delegate="prev()" class="btn btn-primary" type="button">
+          Previous
+        </button>
+        <button click.delegate="next()" class="btn btn-primary" type="button">Next</button>
       </div>
     </div>
   </div>
