@@ -11,6 +11,8 @@
     </div>
   </nav>
 
+  <loading-indicator loading.bind="router.isNavigating || bookService.isRequesting"></loading-indicator>
+
   <div class="container app-container">
     <div class="row">
       <router-view class="col-xs-12"></router-view>

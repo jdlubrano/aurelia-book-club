@@ -143,7 +143,15 @@
               "css/bootstrap.css"
             ]
           },
-          "moment"
+          "moment",
+          {
+            "name": "nprogress",
+            "path": "../node_modules/nprogress",
+            "main": "nprogress",
+            "resources": [
+              "nprogress.css"
+            ]
+          }
         ]
       }
     ]

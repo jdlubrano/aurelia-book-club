@@ -1,4 +1,12 @@
+import {BookService} from './book-service';
+
 export class App {
+  static inject() { return [BookService]; }
+
+  constructor(BookService) {
+    this.bookService = BookService;
+  }
+
   configureRouter(config, router) {
     config.title = 'Dev Book Club';
     config.options.pushState = true;
