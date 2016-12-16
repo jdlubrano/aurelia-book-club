@@ -20,7 +20,7 @@ export class Dashboard {
       this.readingAssignments = assignments;
 
       let readingAssignment = assignments.filter(assignment => {
-        return assignment.dueDate.isSameOrAfter(moment());
+        return assignment.dueDate.isSameOrAfter(moment().startOf('day'));
       })[0];
 
       this.readingAssignmentIndex = this.readingAssignments
